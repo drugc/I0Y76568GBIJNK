@@ -35,7 +35,7 @@ body {
 .profile-card::before {
   content: '';
   position: absolute;
-  opacity: 80%;
+  opacity: 60%;
   top: -50%;
   left: -50%;
   width: 200%;
