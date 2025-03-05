@@ -46,6 +46,7 @@ body {
 
 .profile-picture {
   position: relative;
+  opacity: 100% ;
   width: 100px;
   height: 100px;
   margin: 0 auto 20px;
