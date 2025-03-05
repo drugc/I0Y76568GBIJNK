@@ -237,13 +237,10 @@ body {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-  #overlay {
-    display: none;
-  }
 
   .profile-card {
-    width: 90%;
-    padding: 20px;
+    width: 50%;
+    padding: 15px;
   }
 
   .profile-picture {
