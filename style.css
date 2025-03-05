@@ -71,6 +71,7 @@ body {
 
 .glowing-text2 {
   font-size: 0.9rem;
+  font-family: Serfi ;
   font-weight: 600;
   color: rgb(94, 240, 196);
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
