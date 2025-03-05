@@ -85,7 +85,7 @@ body {
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff79, 0 0 30px #ffffff, 0 0 40px #ffffff;
   }
   100% {
-    text-shadow: 0 0 20px #000000, 0 0 30px #ff0b0b, 0 0 40px #ff0000, 0 0 50px #2c2c2c;
+     text-shadow: 0 0 20px #000000, 0 0 30px #008b52, 0 0 40px #008822, 0 0 50px #2c2c2c;
   }
 }
 
