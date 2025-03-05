@@ -246,6 +246,7 @@ body {
   .profile-card {
     width: 90%;
     padding: 20px;
+    color: black;
   }
 
   .profile-picture {
