@@ -245,7 +245,7 @@ body {
 
   .profile-card {
     width: 90%;
-    padding: 30px;
+    padding: 20px;
   }
 
   .profile-picture {
@@ -262,6 +262,6 @@ body {
   }
 
   .social-links {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
