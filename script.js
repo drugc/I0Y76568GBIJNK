@@ -4,16 +4,11 @@ const audio = document.querySelector('audio');
 const terminalLinks = document.querySelectorAll('.terminal-link');
 
 function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return /Android|webOS|iPhone|Windows|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 
 if (isMobileDevice()) {
-  overlay.style.display = 'none';
-  content.classList.remove('hidden');
-  audio.play(); 
-} else {
-
   terminalLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -35,4 +30,7 @@ if (isMobileDevice()) {
       }
     });
   });
-}
+
+ 
+} 
+
