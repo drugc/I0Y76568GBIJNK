@@ -1,76 +1,12 @@
-
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-
-@media (max-width: 768px) {
-  #overlay {
-    display: none;
-  }
-  .content {
-    display: block !important; 
-  }
-}
-
-
-.hidden {
-  display: none;
-}
-
-
-@media (max-width: 768px) {
-  .profile-card {
-    width: 90%; 
-    padding: 20px; 
-
-  .profile-picture {
-    width: 100px; 
-    height: 100px;
-  }
-
-  .glowing-text1 {
-    font-size: 2rem; 
-  }
-
-  .glowing-text2 {
-    font-size: 0.9rem; 
-  }
-
-  .social-links {
-    font-size: 1.5rem;
-  }
-}
-}
+/* General Styles */
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2V2bG8xbjM5OWMycWI2dWFvOGdvb29yY29zbDV1dW9wNnEzczU2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9WC8WTZsFxkRi/giphy.gif');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://files.catbox.moe/dxpde0.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
   height: 100vh;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  animation: pulseBackground 10s infinite alternate;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -86,11 +22,13 @@ body {
   backdrop-filter: blur(10px);
   opacity: 90%;
   border-radius: 20px;
-  padding: 40px;
-  width: 30%;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .profile-card::before {
@@ -105,19 +43,10 @@ body {
   z-index: -1;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .profile-picture {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
@@ -131,66 +60,41 @@ body {
   object-fit: cover;
 }
 
-.glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-}
-
 .glowing-text1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-family: Fantasy ;
   font-weight: 600;
   color: #aaaaaa;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #aaaaaa, 0 0 40px #8f8f8f;
-  animation: glowText 2s infinite alternate;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #8f8f8f;
+  animation: glowText 0.20S infinite alternate;
 }
 
 .glowing-text2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: cursive;
   font-weight: 600;
-  color: rgb(201, 201, 201);
+  color: rgb(94, 240, 196);
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes glowText {
   0% {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b3b3b3, 0 0 40px #cacaca;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff79, 0 0 30px #ffffff, 0 0 40px #ffffff;
   }
   100% {
-    text-shadow: 0 0 20px #be1313, 0 0 30px #9b9696, 0 0 40px #a3a3a3, 0 0 50px #2c2c2c;
+    text-shadow: 0 0 20px #000000, 0 0 30px #ff0b0b, 0 0 40px #ff0000, 0 0 50px #2c2c2c;
   }
 }
 
 .social-links {
-  margin-top: 5px;
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 25px;
-  margin: 0 10px;
-  transition: all 0.3s ease;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social-link {
   display: inline-block;
-  margin: 0 10px;
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
@@ -202,28 +106,9 @@ body {
 .social-link:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgb(255, 0, 0);
-  padding: 10px 40px;
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .profile-card::before {
-    height: 300%;
-    width: 500%;
-  }
-  body.custom-cursor {
-    cursor: auto;
-  }
-  body.custom-cursor a,
-  body.custom-cursor button {
-    cursor: pointer;
-  }
-}
-
-.social-links {
-  font-size: 2rem;
-}
-
-
+/* Overlay Styles */
 #overlay {
   position: fixed;
   top: 0;
@@ -243,7 +128,7 @@ body {
 .terminal {
   background-color: #2d2d2d;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   max-width: 600px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -350,30 +235,31 @@ body {
   text-decoration: underline;
 }
 
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  #overlay {
+    display: none;
+  }
 
+  .profile-card {
+    width: 90%;
+    padding: 20px;
+  }
 
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
 
-.profile-card {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  opacity: 90%;
-  border-radius: 20px;
-  padding: 40px;
-  width: 90%; 
-  max-width: 400px; 
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto; 
-}
+  .glowing-text1 {
+    font-size: 1.5rem;
+  }
 
+  .glowing-text2 {
+    font-size: 0.8rem;
+  }
 
-body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://files.catbox.moe/dxpde0.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
+  .social-links {
+    font-size: 1.2rem;
+  }
 }
