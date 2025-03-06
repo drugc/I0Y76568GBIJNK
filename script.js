@@ -24,7 +24,7 @@ if (isMobileDevice()) {
           window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
           break;
         case 'web':
-          window.open('https://imer.best', '_blank');
+          window.open('https://programs.lol', '_blank');
           
           break;
       }
