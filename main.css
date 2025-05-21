@@ -127,3 +127,6 @@
   .web{
     color: #007bff;
   }
+.x{
+    color: var(--text-color);
+   }
